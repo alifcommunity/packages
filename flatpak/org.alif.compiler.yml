@@ -1,0 +1,37 @@
+app-id: org.alif.compiler
+runtime: org.freedesktop.Platform
+runtime-version: '19.08'
+sdk: org.freedesktop.Sdk
+command: alif
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --share=network
+  - --filesystem=xdg-documents
+modules:
+  - name: boost
+    buildsystem: simple
+    build-commands:
+      - ./bootstrap.sh --prefix=/app --with-toolset=gcc --with-icu --with-python=/usr/bin/python2
+      - ./b2 install variant=release link=shared runtime-link=shared cxxflags="$CXXFLAGS" linkflags="$LDFLAGS" -j $FLATPAK_BUILDER_N_JOBS
+    sources:
+      - type: archive
+        url: https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.bz2
+        sha256: 59c9b274bc451cf91a9ba1dd2c7fdcaf5d60b1b3aa83f2c9fa143417cc660722
+  - name: alif-lib
+    buildsystem: simple
+    build-commands:
+      - install -d usr /app
+    sources:
+      - type: git
+        url: https://github.com/sulimanp/alif-pkg.git
+  - name: alif-compiler
+    buildsystem: simple
+    build-commands:
+      #- g++ -m64 -std=c++11 -Wl,--as-needed -finput-charset=utf-8 -Wall -fexceptions -O2 -Os -s -DLINUX -Wl,--gc-sections -Wl,--hash-style=both -Wl,-Bstatic -static -static-libgcc -static-libstdc++ -Wunused-but-set-variable -I"/app/usr/local/include/aliflibwx" -I"/app/usr/local/include/" -I"/usr/local/include/" -I"./" "alif.cpp" -o "alif"
+      - g++ -m64 -std=c++11 -finput-charset=utf-8 -I"/app/usr/local/include/aliflibwx" -I"/app/usr/local/include/" -I"/usr/local/include/" -I"./" "alif.cpp" -o "alif"
+      - install -D alif /app/bin/alif
+    sources:
+      - type: git
+        url: https://github.com/aliflanguage/compiler.git
