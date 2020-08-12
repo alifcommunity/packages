@@ -15,15 +15,41 @@ modules:
   - name: wxWidgets
     config-opts:
       - --with-gtk=2
-      - --enable-webkit
+      - --enable-gui
+      - --enable-aui
+      - --disable-shared 
+      - --enable-shared=no 
+      - --enable-unicode 
+      - --disable-monolithic 
+      - --disable-debug 
+      - --disable-debug_flag 
+      - --disable-debug_gdb 
+      - --enable-propgrid 
+      - --enable-stc 
+      - --enable-html 
+      - --disable-richtext 
+      - --disable-ribbon
+      - --disable-sys-libs 
+      - --with-libjpeg=builtin 
+      - --with-libpng=builtin 
+      - --with-libtiff=builtin 
+      - --with-regex=builtin 
+      - --with-zlib=builtin 
+      - --with-expat=builtin 
+      - --with-liblzma=builtin 
+      - --with-libmspack=builti 
+      - --enable-optimise 
+      - --disable-compat28 
       - --enable-webview
-      - --enable-webviewwebkit
     build-options:
-      cxxflags: "-std=c++11"
+      cxxflags: "-std=c++11 -m64 "
+      env:
+        VENDOR: "alif_compiler" 
+        WX_FLAVOUR: "alif" 
+        WX_LIB_FLAVOUR: "alif_lib"
     sources:
-      - type: archive
-        url: https://github.com/wxWidgets/wxWidgets/archive/v3.1.3.tar.gz
-        sha256: a5cb5ea326d76b5e472e9400933cef17c900d5c9b549e40eef00b64fe86d7cb0
+      - type: git
+        url: https://github.com/wxWidgets/wxWidgets.git
 
 
   - name: webkitgtk 
@@ -73,7 +99,7 @@ modules:
   - name: alif-lib
     buildsystem: simple
     build-commands:
-      - install -d usr /app
+      - cp -rv usr /app
     sources:
       - type: git
         url: https://github.com/sulimanp/alif-pkg.git
@@ -82,9 +108,9 @@ modules:
   - name: alif-compiler
     buildsystem: simple
     build-commands:
-      #- g++ -m64 -std=c++11 -Wl,--as-needed -finput-charset=utf-8 -Wall -fexceptions -O2 -Os -s -DLINUX -Wl,--gc-sections -Wl,--hash-style=both -Wl,-Bstatic -static -static-libgcc -static-libstdc++ -Wunused-but-set-variable -I"/app/usr/local/include/aliflibwx" -I"/app/usr/local/include/" -I"/usr/local/include/" -I"./" "alif.cpp" -o "alif"
       - g++ -m64 -std=c++11 -finput-charset=utf-8 -I"/app/usr/local/include/aliflibwx" -I"/app/usr/local/include/" -I"/usr/local/include/" -I"./" "alif.cpp" -o "alif"
       - install -D alif /app/bin/alif
     sources:
       - type: git
         url: https://github.com/aliflanguage/compiler.git
+
