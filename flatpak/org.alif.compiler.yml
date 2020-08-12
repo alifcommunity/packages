@@ -114,3 +114,11 @@ modules:
       - type: git
         url: https://github.com/aliflanguage/compiler.git
 
+
+  #- name: alif-studio
+  #  buildsystem: simple
+  #  build-commands:
+  #  - # BUILD HERE
+  #  sources: 
+  #    - type: git
+  #      url: https://github.com/aliflanguage/alifstudio.git
