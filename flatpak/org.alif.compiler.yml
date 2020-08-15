@@ -7,6 +7,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --filesystem=xdg-documents
+  - --share=network
 modules:
   - shared-modules/python2.7/python-2.7.json 
   - shared-modules/gtk2/gtk2.json
