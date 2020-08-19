@@ -122,3 +122,11 @@ modules:
         url: https://github.com/aliflanguage/alifstudio.git
         branch: flatpak-fork-unstable
 
+
+  - name: desktop-file
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 "org.alif.studio.desktop" /app/share/applications/"org.alif.compiler.desktop"
+    sources:
+      - type: file
+        path: org.alif.studio.desktop
