@@ -14,7 +14,7 @@ git clone git@github.com:aliflanguage/packages.git
 ### البناء 
 ```bash
 cd flatpak
-flatpak-builder build-dir org.alif.compiler.yml
+flatpak-builder build-dir org.alif.compiler.yml --ccache
 ```
 ### الإختبار 
 يمكنك استخدام المترجم مباشرة
