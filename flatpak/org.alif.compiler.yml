@@ -101,8 +101,7 @@ modules:
       - ln -s /app/bin/alif /app/usr/local/bin/alif
     sources:
       - type: git
-        #url: https://github.com/aliflanguage/compiler.git
-        url: file:///home/suliman/git/compiler
+        url: https://github.com/aliflanguage/compiler.git
         branch: flatpak-fork-unstable
 
 
@@ -120,7 +119,6 @@ modules:
       - ln -s /app/usr/local/bin/alifstudio /app/bin/alifstudio;
     sources: 
       - type: git
-        #url: https://github.com/aliflanguage/alifstudio.git
-        url: file:///home/suliman/git/alifstudio
+        url: https://github.com/aliflanguage/alifstudio.git
         branch: flatpak-fork-unstable
 
