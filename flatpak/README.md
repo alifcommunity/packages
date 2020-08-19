@@ -28,7 +28,7 @@ flatpak-builder --run build-dir org.alif.compiler.yml bash
 
 ### التثبيت والتشغيل
 ```bash
-flatpak-builder --user --install build-dir org.alif.compiler.yml
+flatpak-builder --user --install build-dir org.alif.compiler.yml --ccache
 flatpak run org.alif.compiler
 ```
 </div>
