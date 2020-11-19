@@ -8,27 +8,29 @@
 ### استنسخ المشروع
 ```bash
 git clone git@github.com:aliflanguage/packages.git 
+cd packages
+git submodule update --init --recursive
 ```
 اضف في اخر السطر -b <اسم الفرع> حسب الفرع المرغوب 
 
 ### البناء 
 ```bash
 cd flatpak
-flatpak-builder build-dir org.alif.compiler.yml --ccache
+flatpak-builder build-dir org.alif.lang.yml --ccache
 ```
 ### الإختبار 
-يمكنك استخدام المترجم مباشرة
+استخدام المترجم مباشرة
 ```bash
-flatpak-builder --run build-dir org.alif.compiler.yml alif
+flatpak-builder --run build-dir org.alif.lang.yml alif
 ```
-او يمكنك الدخول مباشرة في البيئة 
+او الدخول مباشرة في البيئة 
 ```bash
-flatpak-builder --run build-dir org.alif.compiler.yml bash
+flatpak-builder --run build-dir org.alif.lang.yml bash
 ```
 
 ### التثبيت والتشغيل
 ```bash
-flatpak-builder --user --install build-dir org.alif.compiler.yml --ccache
-flatpak run org.alif.compiler
+flatpak-builder --user --install build-dir org.alif.lang.yml --ccache
+flatpak run --devel org.alif.lang
 ```
 </div>
