@@ -132,3 +132,12 @@ modules:
       - type: file
         path: org.alif.studio.desktop
 
+
+  - name: icon-file
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 "org.alif.studio.png" /app/share/icons/hicolor/32x32/apps/"org.alif.lang.png"
+    sources:
+      - type: file
+        path: org.alif.studio.png
+

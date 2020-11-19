@@ -3,6 +3,7 @@ Name=Alif Studio
 Comment=The Alif Arabic Programming Language IDE
 GenericName=Alif Studio
 Exec=/app/bin/alifstudio
+Icon=org.alif.lang.png
 Type=Application
 Categories=TextEditor;Development;IDE;
 Terminal=false
