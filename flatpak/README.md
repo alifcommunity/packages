@@ -16,21 +16,21 @@ git submodule update --init --recursive
 ### البناء 
 ```bash
 cd flatpak
-flatpak-builder build-dir org.alif.lang.yml --ccache
+flatpak-builder build-dir org.aliflang.lang.yml --ccache
 ```
 ### الإختبار 
 استخدام المترجم مباشرة
 ```bash
-flatpak-builder --run build-dir org.alif.lang.yml alif
+flatpak-builder --run build-dir org.aliflang.lang.yml alif
 ```
 او الدخول مباشرة في البيئة 
 ```bash
-flatpak-builder --run build-dir org.alif.lang.yml bash
+flatpak-builder --run build-dir org.aliflang.lang.yml bash
 ```
 
 ### التثبيت والتشغيل
 ```bash
-flatpak-builder --user --install build-dir org.alif.lang.yml --ccache
-flatpak run --devel org.alif.lang
+flatpak-builder --user --install build-dir org.aliflang.lang.yml --ccache
+flatpak run --devel org.aliflang.lang
 ```
 </div>
