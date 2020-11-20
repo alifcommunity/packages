@@ -72,6 +72,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/wxWidgets/wxWidgets.git
+        commit: 152ec5103367d6d5e2c77ab180e9e432b58deac7
 
 
   - name: boost
@@ -92,8 +93,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/sulimanp/alif-pkg.git
-  
-  
+        commit: 5be34d8fca876407ca25b375d5118e27b7f7d1dd
+
+
   - name: alif-compiler
     buildsystem: simple
     build-commands:
@@ -105,6 +107,7 @@ modules:
       - type: git
         url: https://github.com/aliflanguage/compiler.git
         branch: flatpak-fork-unstable
+        commit: f09b9a2cabf3f3a1907070d20874f14df4635b13
 
 
   - name: alif-studio
@@ -123,6 +126,7 @@ modules:
       - type: git
         url: https://github.com/aliflanguage/alifstudio.git
         branch: flatpak-fork-unstable
+        commit: 9e042b8dfe176065c2c7a2866ed105d7ee5ad6e3
 
 
   - name: desktop-files
