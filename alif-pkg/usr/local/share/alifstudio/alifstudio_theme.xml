@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<attributes>
+
+	<additionalAttributes enabled = "0" />
+
+    <Alif_Theme name = "Alif_Light">
+		<Font>JF Flat</Font>
+		<Font_Size>14</Font_Size>
+        <Color_STRING>#A4C08C</Color_STRING>
+        <Color_NUMBER>#D7693D</Color_NUMBER>
+        <Color_COMMENT>#AAB0BE</Color_COMMENT>
+		<Color_CODE>#5A6670</Color_CODE>
+		<Color_OPERATOR>#C56B74</Color_OPERATOR>
+		<Color_WORD>#CC7B84</Color_WORD>
+		<Color_WORD2>#AC74B1</Color_WORD2>
+		<Color_WORD3>#5B8EC8</Color_WORD3>
+		<Color_WORD4>#AC74B1</Color_WORD4>
+		<Color_ERROR>#C56B74</Color_ERROR>
+		<Color_Line_BG>#F7F8F9</Color_Line_BG>
+		<Color_BG>#FAFBFC</Color_BG>
+		<Color_FG>#32363A</Color_FG>
+		<Color_LINENUMBER_FG>#A7B0C7</Color_LINENUMBER_FG>
+		<Color_LINENUMBER_BG>#EFF1F5</Color_LINENUMBER_BG>
+    </Alif_Theme>
+	
+    <Alif_Theme name = "Alif_Dark">
+		<Font>JF Flat</Font>
+		<Font_Size>14</Font_Size>
+		<Color_STRING>#A4C08C</Color_STRING>
+        <Color_NUMBER>#D7693D</Color_NUMBER>
+        <Color_COMMENT>#9A9B99</Color_COMMENT>
+		<Color_CODE>#C5C8C6</Color_CODE>
+		<Color_OPERATOR>#C56B74</Color_OPERATOR>
+		<Color_WORD>#CC7B84</Color_WORD>
+		<Color_WORD2>#9872A2</Color_WORD2>
+		<Color_WORD3>#5B8EC8</Color_WORD3>
+		<Color_WORD4>#9872A2</Color_WORD4>
+		<Color_ERROR>#C56B74</Color_ERROR>
+		<Color_Line_BG>#303030</Color_Line_BG>
+		<Color_BG>#1E1E1E</Color_BG>
+		<Color_FG>#C5C8C6</Color_FG>
+		<Color_LINENUMBER_FG>#A7B0C7</Color_LINENUMBER_FG>
+		<Color_LINENUMBER_BG>#292929</Color_LINENUMBER_BG>
+    </Alif_Theme>
+	
+</attributes>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>org.aliflang.lang</id>
+	<content_rating type="oars-1.0" />
+	<project_license>GPL-3.0 and LGPL-3.0</project_license>
+	<metadata_license>CC-BY-SA-3.0</metadata_license>
+	<name>Alif Programming Language</name>
+	<name xml:lang="ar">لغة البرمجة ألف</name>
+	<summary>Alif(ألف), Arabic programming language</summary>
+	<summary xml:lang="ar">ألف, لغة برمجة عربية</summary>
+	<developer_name>Alif community</developer_name>
+	<screenshots>
+		<screenshot type="default">
+			<caption> Alif Studio</caption>
+			<image>https://j.top4top.io/p_17859r00d1.png</image>
+		</screenshot>
+	</screenshots>
+	<description>
+		<p>Alif programming language is open source, multi-platform, and professional user interface</p>
+		<p xml:lang="ar">لغة البرمجة العربية ألف2 مفتوحة المصدر، متعددة المنصات بواجهة احترافية</p>
+	</description>
+	<launchable type="desktop-id">org.aliflang.lang.desktop</launchable>
+	<url type="homepage">https://www.aliflang.org</url>
+	<releases>
+		<release version="2.0.14" date="2020-06-27"/>
+	</releases>
+</component>
