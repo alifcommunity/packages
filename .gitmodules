@@ -4,3 +4,9 @@
 [submodule "alif-pkg/usr/local/lib/aliflib"]
 	path = alif-pkg/usr/local/lib/aliflib
 	url = https://github.com/alifcommunity/lib.git
+[submodule "pacman/webui"]
+	path = pacman/webui
+	url = https://aur.archlinux.org/webui.git
+[submodule "pacman/alif"]
+	path = pacman/alif
+	url = https://aur.archlinux.org/alif.git
